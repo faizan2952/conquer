@@ -1,0 +1,67 @@
+
+
+
+// button cta 
+.cta {
+    padding: 3.5rem;
+    text-align: center;
+
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+
+    .btn {
+        position: relative;
+        overflow: hidden;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        // border-radius: 10rem;
+        clip-path: polygon(0 0, 100% 0%, 90% 100%, 10% 100%);
+
+        border: none;
+        background-color: var(--color-primary-dark);
+        // background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+        color: #fff;
+
+        &>* {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            transition: all .2s;
+        }
+
+        &-visible {
+            padding: 2rem 7.5rem;
+        }
+
+        &-hidden {
+            position: absolute;
+            left: 0;
+            top: -100%;
+            padding: 2rem 0;
+        }
+
+        &:hover {
+            background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+        }
+
+        &:hover .btn-visible {
+            transform: translateY(100%);
+        }
+
+        &:hover .btn-hidden {
+            top: 0;
+        }
+
+        &:focus {
+            outline: none;
+            animation: pulsate 1s infinite;
+        }
+
+
+    }
+}
